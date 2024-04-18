@@ -142,3 +142,163 @@ function getBooks() {
 function getBook(id) {
   return data.find((d) => d.id === id);
 }
+
+/*
+const book = getBook(3);
+
+var { title, author, pages, publicationDate, genres, hasMovieAdaptation } =
+  book;
+
+console.log(author, title, genres)
+
+const [primaryGenre, secondGenre, ...otherGenres] = genres;
+
+// primaryGenre;
+// secondGenre;
+// console.log(otherGenres[1])
+
+const newGenres = [...genres, "new genre"];
+newGenres;
+
+const updatedBook = {
+  ...book,
+  // Adding a new property
+  moviePublicationDate: "2001-12-19",
+
+  // Overwriting an existing property
+  pages: 1210,
+};
+
+const getYear = (str) => str.split("-")[0]
+updatedBook;
+
+var {title, author, pages, publicationDate} = updatedBook;
+
+const summary = `${title}, a ${pages}-page long book, was written by ${author} and published in ${getYear(
+  publicationDate
+)}`
+summary;
+
+pages > 1000 ? "Over 1 thousand" : "Less than 1 thousand"
+
+const summary2 = `${title}, which has ${
+    pages > 1000 ? "over a thousand" : "less than 1000"
+  } pages, was written by ${author} and published in ${
+    getYear(
+      publicationDate
+    )
+  }`
+
+summary2;
+
+console.log('' && 'some string');
+console.log(hasMovieAdaptation || 'some string');
+
+const countWrong = book.reviews.librarything?.reviewsCount || "no data";
+countWrong;
+
+const count = book.reviews.librarything?.reviewsCount ?? "no data";
+count;
+
+const getTotalReviewCount = (b) => {
+  return b.reviews.librarything?.reviewsCount ?? 0 + b.reviews.goodreads?.reviewsCount ?? 0
+}
+
+const totReviews = getTotalReviewCount(book);
+totReviews;
+*/
+
+
+
+/*
+const books = getBooks();
+const getTotalReviewCount = (b) => {
+  const la = b.reviews.librarything?.reviewsCount ?? 0;
+  const gr = b.reviews.goodreads?.reviewsCount ?? 0;
+  la;
+  gr;
+  return la + gr;
+  
+}
+
+essentialData = books.map((b) => ({
+  title: b.title,
+  author: b.author,
+  reviewsCount: getTotalReviewCount(b),
+  pages: b.pages,
+}));
+
+
+console.log(essentialData)
+
+
+const longBooks = books
+  .filter((b) => b.pages > 500)
+  .filter((b) => b.hasMovieAdaptation)
+const shortBooks = books
+  .filter((b) => b.pages < 500)
+  .filter((b) => b.hasMovieAdaptation)
+
+longBooks;
+shortBooks;
+
+const adventureBooks = books.filter((b) => b.genres.includes("adventure"));
+
+adventureBooks;
+
+const pagesAllBooks = books.reduce((acc, b) => b.pages + acc, 0)
+const avgPages = pagesAllBooks / books.length;
+const bookPages = books.map((b) => b.pages);
+bookPages;
+pagesAllBooks;
+avgPages;
+
+
+const arr = [3,7,1,9,6, 80];
+const sortedArr = arr.slice().sort((a, b) => a - b);
+sortedArr;
+arr;
+
+const sortedByPages = essentialData.slice().sort((a, b) => a.pages - b.pages);
+sortedByPages;
+
+const newBookID = essentialData.length + 1;
+const newBook = {
+  id: newBookID,
+  title: "Harry Potter and the Chamber of Secrets",
+  author: "J. K. Rowling",
+}
+
+const booksAfterAdd = [...books, newBook];
+booksAfterAdd;
+
+const booksAfterDelete = booksAfterAdd.filter((b) => b.id != 3)
+booksAfterDelete;
+
+*/
+
+
+const protocol = "https://";
+const domain = "jsonplaceholder.typicode.com";
+const path = "/todos";
+const URL = protocol + domain + path;
+
+/*
+const resp = fetch(URL)
+  .then(res => res.json())
+  .then(data => console.log(data)
+);
+
+console.log("Test output")
+*/
+
+
+async function getTodos() {
+  const res = await fetch(URL)
+  const data = await res.json();
+  console.log(data);
+  return data;
+}
+
+const t = getTodos()
+t;
