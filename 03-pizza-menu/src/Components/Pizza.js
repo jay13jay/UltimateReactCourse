@@ -1,13 +1,11 @@
 function Pizza(props) {
-    console.log(props.name)
-    console.log(props.soldOut)
     return (
         <div className="pizza">
             <img src={props.img} alt="pizza" />
             <div className="pizza-span">
                 <h3>{props.title}</h3>
                     {
-                        props.soldOut ?
+                        props.available ?
                         "SOLD OUT" :
                         "$" + props.price
                     }
