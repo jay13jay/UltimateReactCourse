@@ -1,7 +1,4 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-#profile pics
-*5-4_profile_pic.jpg
-*profile_pic.jpg
 
 # dependencies
 /node_modules
