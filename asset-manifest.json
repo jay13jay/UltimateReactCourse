@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.a3c63e52.css",
-    "main.js": "/static/js/main.75f1f014.js",
-    "index.html": "/index.html",
-    "main.a3c63e52.css.map": "/static/css/main.a3c63e52.css.map",
-    "main.75f1f014.js.map": "/static/js/main.75f1f014.js.map"
+    "main.css": "/UltimateReactCourse/static/css/main.a3c63e52.css",
+    "main.js": "/UltimateReactCourse/static/js/main.75f1f014.js",
+    "index.html": "/UltimateReactCourse/index.html",
+    "main.a3c63e52.css.map": "/UltimateReactCourse/static/css/main.a3c63e52.css.map",
+    "main.75f1f014.js.map": "/UltimateReactCourse/static/js/main.75f1f014.js.map"
   },
   "entrypoints": [
     "static/css/main.a3c63e52.css",
