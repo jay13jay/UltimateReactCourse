@@ -2,8 +2,8 @@
 *.vscode
 
 #profile pics
-*/5-4_profile_pic.jpg
-*/profile_pic.jpg
+**/5-4_profile_pic.jpg
+**/profile_pic.jpg
 
 # Logs
 logs
