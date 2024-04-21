@@ -1,4 +1,5 @@
-function Footer() {
+
+function Footer(props) {
     const openHour = 9
     const closeHour = 22
     const currentHour = new Date().getHours()
@@ -23,14 +24,23 @@ function Footer() {
             {
                 currentlyOpen() ?
                     <>
-                        <h2 className="open"> We're currently open!</h2>
-                        <h3 className="btn"> <a href="/orderPage">Order Now!</a></h3>
+                        {
+                            props.orderAvail ? 
+                                <>
+                                    <h2 className="open"> We're currently open!</h2>
+                                    <h3 className="btn"> <a href="/">Order Now!</a></h3>
+                                </>
+                        :
+                            <h3 className="btn unavail"> <p>Ordering Unavailable!</p></h3>
+                        }
                     </>
                     :
                     <>
+                        <div className="align-items-center">
                         <h2 className="closed"> Closed. <br /> {'Hours:\t'}
                             {amPM(openHour)} - {amPM(closeHour)}
                         </h2>
+                        </div>
                     </>
             }
         </div>

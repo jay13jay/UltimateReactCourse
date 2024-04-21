@@ -5,9 +5,11 @@ function Pizza(props) {
             <div className="pizza-span">
                 <h3>{props.title}</h3>
                     {
-                        props.available ?
-                        "SOLD OUT" :
-                        "$" + props.price
+                        props.available ? (
+                        <p className="pizza sold-out">SOLD OUT</p>
+                        ) : (
+                            <p>{"$" +props.price}</p>
+                        )
                     }
                 <p>{props.ingredients}</p>
             </div>
